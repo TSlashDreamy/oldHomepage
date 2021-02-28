@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"
+  />
+
+  <!-- * Привязка стилей -->
+
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <link rel="shortcut icon" href="src/portfolio/ts.png" type="image/png" />
+
+    <!-- * Привязка скриптов -->
+    <script src="js/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/jquery.vide.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+
+    <title>TSlash</title>
+
+  </head>
+
+  <body>
+
+    <!-- * Курсор -->
+    <!-- ! С фоном лагает
+    <div class='cursor' id="cursor"></div>
+    <div class='cursor2' id="cursor2"></div>
+    <div class='cursor3' id="cursor3"></div>
+-->
+
+    <header>
+
+<!-- ? Новое меню -->
+      <div class="menu">
+        <div
+          class="wow heartBeat label hover-target"
+          data-wow-delay="2s"
+          data-wow-iteration="3"
+        >
+          ☰
+        </div>
+        <div class="spacer"></div>
+        <a id="menu-item" class="menu-item hover-target" href="#about">
+            <span text="menuabout">Обо мне</span></a>
+          <a class="menu-item hover-target" href="#projects"
+            ><span text="menuprojects">Портфолио</span></a>
+          <a class="menu-item hover-target" href="#contacts"
+            ><span text="menucontacts">Контакты</span></a>
+          <a
+            class="menu-item hover-target"
+            href="https://github.com/TFlashgamer?tab=overview&from=2020-06-01&to=2020-06-30"
+            ><span>GitHub</span></a>
+          <a class="menu-item hover-target" href="#!"><span>Discord bot</span></a>
+        <a class="menu-item hover-target" href="#!"
+            ><span>NEW!</span></a>
+        <script src="js/languages.js"></script>
+        <a class="menu-item hover-target">
+          <input id="lang" type="checkbox" onclick="changeLagnuage()" />
+          <label for="lang" class="rus" id="langanimation"
+            ><span>Текущий язык: RUS</span></label
+          ><label for="lang" class="ukr" id="langanimation"
+            ><span>Поточна мова: UKR</span></label
+          >
+        </a>
+        <!-- * Привязка скрипта для анимации при смене языка -->
+          <script src="js/animation.js"></script>
+        </div>
+      </div>
+
+      <!-- ! Старое меню --><!--
+      <nav class="wow backInLeft navigation-menu" id="js-nav-menu">
+        <div class="navigation-menu-toggle" id="js-nav-menu-toggle">
+          <span class="navigation-menu-bars"></span>
+        </div>
+        <ul class="menu-list">
+          <li class="menu-list-item">
+            <a href="#about" class="nav-link" text="menuabout">Обо мне</a>
+          </li>
+          <li class="menu-list-item">
+            <a href="#projects" class="nav-link" text="menuprojects"
+              >Портфолио</a
+            >
+          </li>
+          <li class="menu-list-item">
+            <a href="#contacts" class="nav-link" text="menucontacts"
+              >Контакты</a
+            >
+          </li>
+          <li class="menu-list-item">
+            <a
+              href="https://github.com/TFlashgamer?tab=overview&from=2020-06-01&to=2020-06-30"
+              class="nav-link"
+              >GitHub</a
+            >
+          </li>
+          <li class="menu-list-item">
+            <a href="html/oni.html" class="nav-link">Discord Bot</a>
+          </li>
+          <script src="js/languages.js"></script>
+          <li class="menu-list-item">
+            <input id="lang" type="checkbox" onclick="changeLagnuage()" />
+            <label for="lang" class="rus" id="langanimation"
+              >Текущий язык: RUS</label
+            ><label for="lang" class="ukr" id="langanimation"
+              >Поточна мова: UKR</label
+            >
+            <script src="js/animation.js"></script>
+          </li>
+        </ul>
+      </nav>
+      <script src="js/menu.js"></script>
+  -->
+
+    </header>
+
+    <main>
+      <!-- * Секция "about"  -->
+      <section id="about" class="about">
+        <!-- * particles.js Фон -->
+<div id="particles-js">
+  <script src="js/particles.min.js"></script>
+<script src="js/app.js"></script>
+    <div class="text-container">
+     <h1 class="wow fadeInDown about-heading" text="aboutheading" data-wow-delay="1s">
+      Добро пожаловать! Я /TSlash
+    </h1>
+    <p class="wow fadeInDown about-description" text="aboutdescription" data-wow-delay="2s">
+      Я занимаюсь FrontEnd разработкой и так же серверной частью на node.js
+    </p>
+  </div>
+</div>
+      <script>
+        var count_particles, stats, update;
+        stats = new Stats();
+        stats.setMode(0);
+        stats.domElement.style.position = "absolute";
+        stats.domElement.style.left = "0px";
+        stats.domElement.style.top = "0px";
+        document.body.appendChild(stats.domElement);
+        count_particles = document.querySelector(".js-count-particles");
+        update = function () {
+          stats.begin();
+          stats.end();
+          if (
+            window.pJSDom[0].pJS.particles &&
+            window.pJSDom[0].pJS.particles.array
+          ) {
+            count_particles.innerText =
+              window.pJSDom[0].pJS.particles.array.length;
+          }
+          requestAnimationFrame(update);
+        };
+        requestAnimationFrame(update);
+      </script>
+      </section>
+
+       <!-- * Секция "projects"  -->
+      <section id="projects" class="projects">
+          <h2 class="wow fadeInDown project-heading" text="projectheading">
+            Вот несколько моих работ
+          </h2>
+        </div>
+
+        <div class="project-grid">
+
+<!--? testing -->
+<div class="portfolio-container">
+<div class="items">
+  <div class="wow fadeInUp item"
+  data-wow-delay="0.1s"
+   onclick="location.href='projects/FrontDev1/index.html';">
+    <svg preserveAspectRatio="xMidYMid slice" viewBox="0 0 300 200">
+      <defs>
+        <clipPath id="clip-0">
+          <circle cx="0" cy="0" fill="#000" r="150px"></circle>
+        </clipPath>
+      </defs>
+      <text text="projecttitle1" class="svg-text" dy=".3em" x="50%" y="50%">
+        Сайт предназначен кому то
+      </text>
+      <g clip-path="url(#clip-0)">
+        <image
+        class="portfolio-image"
+          height="110%"
+          preserveAspectRatio="xMinYMin slice"
+          width="100%"
+          xlink:href="src/portfolio/job/job1.png"
+        ></image>
+        <text text="projecttitle1" class="svg-masked-text" dy=".3em" x="50%" y="50%">
+          Сайт предназначен кому то
+        </text>
+      </g>
+    </svg>
+  </div>
+  <div class="wow fadeInUp item"
+  data-wow-delay="0.2s"
+  onclick="location.href='projects/FrontDev2/index.html';">
+    <svg preserveAspectRatio="xMidYMid slice" viewBox="0 0 300 200">
+      <defs>
+        <clipPath id="clip-1">
+          <circle cx="0" cy="0" fill="#000" r="150px"></circle>
+        </clipPath>
+      </defs>
+      <text text="projecttitle2" class="svg-text" dy=".3em" x="50%" y="50%">
+        Сайт с опросом
+      </text>
+      <g clip-path="url(#clip-1)">
+        <image
+        class="portfolio-image"
+          height="110%"
+          preserveAspectRatio="xMinYMin slice"
+          width="100%"
+          xlink:href="src/portfolio/job/job2.png"
+        ></image>
+        <text text="projecttitle2" class="svg-masked-text" dy=".3em" x="50%" y="50%">
+          Сайт с опросом
+        </text>
+      </g>
+    </svg>
+  </div>
+  <div class="wow fadeInUp item"
+  data-wow-delay="0.3s"
+  onclick="location.href='projects/FrontDev3/index.html';">
+    <svg preserveAspectRatio="xMidYMid slice" viewBox="0 0 300 200">
+      <defs>
+        <clipPath id="clip-2">
+          <circle cx="0" cy="0" fill="#000" r="150px"></circle>
+        </clipPath>
+      </defs>
+      <text text="projecttitle3" class="svg-text" dy=".3em" x="50%" y="50%">
+        Сайт лендинг для продаж продуктов
+      </text>
+      <g clip-path="url(#clip-2)">
+        <image
+        class="portfolio-image"
+          height="110%"
+          preserveAspectRatio="xMinYMin slice"
+          width="100%"
+          xlink:href="src/portfolio/job/job3.png"
+        ></image>
+        <text text="projecttitle3" class="svg-masked-text" dy=".3em" x="50%" y="50%">
+          Сайт лендинг для продаж продуктов
+        </text>
+      </g>
+    </svg>
+  </div>
+  <div class="wow fadeInUp item"
+  data-wow-delay="0.4s"
+  onclick="location.href='projects/FrontDev4/index.html';">
+    <svg preserveAspectRatio="xMidYMid slice" viewBox="0 0 300 200">
+      <defs>
+        <clipPath id="clip-3">
+          <circle cx="0" cy="0" fill="#000" r="150px"></circle>
+        </clipPath>
+      </defs>
+      <text text="projecttitle4" class="svg-text" dy=".3em" x="50%" y="50%">
+        Сайт справка
+      </text>
+      <g clip-path="url(#clip-3)">
+        <image
+        class="portfolio-image"
+          height="110%"
+          preserveAspectRatio="xMinYMin slice"
+          width="100%"
+          xlink:href="src/portfolio/job/job4.png"
+        ></image>
+        <text text="projecttitle4" class="svg-masked-text" dy=".3em" x="50%" y="50%">
+          Сайт справка
+        </text>
+      </g>
+    </svg>
+  </div>
+  <div class="wow fadeInUp item"
+  data-wow-delay="0.5s"
+  onclick="location.href='oni.html';">
+    <svg preserveAspectRatio="xMidYMid slice" viewBox="0 0 300 200">
+      <defs>
+        <clipPath id="clip-4">
+          <circle cx="0" cy="0" fill="#000" r="150px"></circle>
+        </clipPath>
+      </defs>
+      <text text="projecttitle5" class="svg-text" dy=".3em" x="50%" y="50%">
+        Oni Discord бот
+      </text>
+      <g clip-path="url(#clip-4)">
+        <image
+        class="portfolio-image"
+          height="110%"
+          preserveAspectRatio="xMinYMin slice"
+          width="100%"
+          xlink:href="src/portfolio/bot.jpg"
+        ></image>
+        <text text="projecttitle5" class="svg-masked-text" dy=".3em" x="50%" y="50%">
+        Oni Discord бот
+        </text>
+      </g>
+    </svg>
+  </div>
+  <div class="wow fadeInUp item"
+  data-wow-delay="0.6s"
+  onclick="location.href='wrongway.html';">
+    <svg preserveAspectRatio="xMidYMid slice" viewBox="0 0 300 200">
+      <defs>
+        <clipPath id="clip-5">
+          <circle cx="0" cy="0" fill="#000" r="150px"></circle>
+        </clipPath>
+      </defs>
+      <text text="projecttitle6" class="svg-text" dy=".3em" x="50%" y="50%">
+        Скоро...
+      </text>
+      <g clip-path="url(#clip-5)">
+        <image
+        class="portfolio-image"
+          height="110%"
+          preserveAspectRatio="xMinYMin slice"
+          width="100%"
+          xlink:href="src/portfolio/job/soon.jpg"
+        ></image>
+        <text text="projecttitle6" class="svg-masked-text" dy=".3em" x="50%" y="50%">
+          Скоро...
+        </text>
+      </g>
+    </svg>
+  </div>
+ </div>
+
+          <a
+            class="wow zoomIn project-button button hover-target"
+            data-wow-delay="0.7s"
+            href="allprojects.html"
+            text="buttontext"
+            >Показать ещё 🢖
+          </a>
+        </div>
+          <script id="rendered-js">
+            /*
+             * Noel Delgado | @pixelia_me
+             */
+          
+            var items = [],
+              point = document.querySelector("svg").createSVGPoint();
+          
+            function getCoordinates(e, svg) {
+              point.x = e.clientX;
+              point.y = e.clientY;
+              return point.matrixTransform(svg.getScreenCTM().inverse());
+            }
+          
+            function changeColor(e) {
+              document.body.className = e.currentTarget.className;
+            }
+          
+            function Item(config) {
+              Object.keys(config).forEach(function (item) {
+                this[item] = config[item];
+              }, this);
+              this.el.addEventListener("mousemove", this.mouseMoveHandler.bind(this));
+            }
+          
+            Item.prototype = {
+              update: function update(c) {
+                this.clip.setAttribute("cx", c.x);
+                this.clip.setAttribute("cy", c.y);
+              },
+              mouseMoveHandler: function mouseMoveHandler(e) {
+                this.update(getCoordinates(e, this.svg));
+              }
+            };
+          
+            [].slice
+              .call(document.querySelectorAll(".item"), 0)
+              .forEach(function (item, index) {
+                items.push(
+                  new Item({
+                    el: item,
+                    svg: item.querySelector("svg"),
+                    clip: document.querySelector("#clip-" + index + " circle"),
+                  })
+                );
+              });
+          
+            [].slice
+              .call(document.querySelectorAll("button"), 0)
+              .forEach(function (button) {
+                button.addEventListener("click", changeColor);
+              });
+              
+            //# sourceURL=pen.js
+          </script>
+      </section>
+
+
+ <!-- * Секция "contacts"  -->
+      <section id="contacts" class="contacts">
+        <div class="contact-text">
+          <h2 class="wow fadeInDown contacts-heading" text="contactsheading">
+            Нужно связаться со мной?
+          </h2>
+          <p
+            class="wow fadeInLeftBig contacts-description"
+            text="contactsdescription"
+          >
+            Если возникли какие-то вопросы вы можете воспользоваться ссылками
+            ниже
+          </p>
+        </div>
+        <div class="wow fadeInLeftBig contact-links">
+          <a class="contact-link hover-target" href="https://discord.gg/yJ9j87P">
+            <i class="fab fa-discord" aria-hidden="true"></i>
+            Discord
+          </a>
+          <a class="contact-link hover-target" href="https://vk.com/tslashdream">
+            <i class="fab fa-vk"></i>
+            VK
+          </a>
+          <a class="contact-link hover-target" href="https://github.com/TFlashgamer">
+            <i class="fab fa-github"></i>
+            GitHub
+          </a>
+          <a class="contact-link hover-target" href="mailto:supergamerzxtata@gmail.com">
+            <i class="fas fa-at"></i>
+            Email
+          </a>
+          <a class="contact-link hover-target" href="https://twitter.com/TSlash_">
+            <i class="fab fa-twitter"></i>
+            Twitter
+          </a>
+        </div>
+
+      </section>
+      
+      <!-- * Привязка скрипта для курсора -->
+      <!--  ! Лагет с включённым фоном
+      <script src="js/cursor.js"></script>
+-->
+    </main>
+
+<!-- * Футер -->
+    <footer class="wow fadeInUp footer">
+
+      <p class="footer-text" text="footertext1">
+        Спасибо что уделили время этому портфолио!
+      </p>
+      <p class="footer-text" text="footertext2">🖤/TSlash</p>
+
+    </footer>
+  </body>
+</html>
