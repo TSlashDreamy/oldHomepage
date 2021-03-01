@@ -187,6 +187,7 @@ body {
   background: #ffffffb0;
   position: absolute;
   transform: rotate(45deg);
+  mix-blend-mode: difference;
 }
 #box .itemX:after {
   width: 7px;
@@ -201,12 +202,14 @@ body {
   height: 30px;
   border-radius: 50%;
   border: 15px solid #ffffffb0;
+  mix-blend-mode: difference;
 }
 #box .itemSq {
   position: absolute;
   width: 30px;
   height: 30px;
   border: 15px solid #ffffffb0;
+  mix-blend-mode: difference;
 }
 #box .itemTri {
   width: 0;
@@ -214,6 +217,7 @@ body {
   border-style: solid;
   border-width: 0 20px 40.9px 20px;
   border-color: transparent transparent #ffffffb0 transparent;
+  mix-blend-mode: difference;
   position: absolute;
 }
 #box .itemTri:before {
@@ -227,6 +231,90 @@ body {
   left: 0;
   top: 7px;
   transform: translate(-50%, 0) scale(0.55);
+}
+
+/* ? box 2 animation */
+
+#box2,
+#box3 {
+  width: 100%;
+  overflow: hidden;
+}
+#box2 > *,
+#box3 > * {
+  animation: fade2 1.5s ease-in-out forwards;
+  transform-origin: center;
+}
+#box2 .itemXin,
+#box3 .itemXin {
+  position: absolute;
+  mix-blend-mode: difference;
+}
+#box2 .itemXin:before,
+#box2 .itemXin:after,
+#box3 .itemXin:before,
+#box3 .itemXin:after {
+  content: "";
+  transform-origin: center;
+}
+#box2 .itemXin:before,
+#box3 .itemXin:before {
+  width: 7px;
+  height: 40px;
+  background: #ffffff;
+  position: absolute;
+  transform: rotate(45deg);
+  mix-blend-mode: difference;
+}
+#box2 .itemXin:after,
+#box3 .itemXin:after {
+  width: 7px;
+  height: 40px;
+  background: #ffffff;
+  position: absolute;
+  transform: rotate(-45deg);
+  /* mix-blend-mode: difference; */
+}
+#box2 .itemOs,
+#box3 .itemOs {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 15px solid #ffffff;
+  mix-blend-mode: difference;
+}
+#box2 .itemSquar,
+#box3 .itemSquar {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 15px solid #ffffff;
+  mix-blend-mode: difference;
+}
+#box2 .itemTriang,
+#box3 .itemTriang {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 20px 40.9px 20px;
+  border-color: transparent transparent #ffffff transparent;
+  position: absolute;
+  mix-blend-mode: difference;
+}
+#box2 .itemTriang:before,
+#box3 .itemTriang:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 20px 32.9px 20px;
+  border-color: transparent transparent #0f0f0f;
+  left: 0;
+  top: 7px;
+  transform: translate(-50%, 0) scale(0.55);
+  /* mix-blend-mode: difference; */
 }
 
 @keyframes fade1 {
@@ -350,11 +438,11 @@ body {
   background: black;
   width: 70%;
   height: 20%;
-  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  clip-path: polygon(0 0, 100% 100%, 100% 0);
   position: absolute;
-  top: 100%;
+  bottom: 96%;
   left: 100%;
-  transform: translate(-85%, -156%);
+  transform: translate(-85%, 100%);
 }
 
 .triangle-left {
