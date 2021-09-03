@@ -1,11 +1,11 @@
 function closeinfo() {
-  $(".info").css("left", "-100%"),
-    $(".info2").css("left", "-100%"),
-    $(".mobile-contacts").css("left", "-100%");
+  $(".info").css("right", "-100%"),
+    $(".info2").css("right", "-100%"),
+    $(".mobile-contacts").css("right", "-100%");
 }
 function html_trigger() {
-  $(".info").css("left", "0").delay(3e3),
-    $(".info2").css("left", "0").delay(3e3),
+  $(".info").css("right", "0").delay(3e3),
+    $(".info2").css("right", "0").delay(3e3),
     $(".info-heading").css("opacity", "0"),
     $(".info-heading")
       .delay(800)
@@ -27,8 +27,8 @@ function html_trigger() {
     });
 }
 function css_trigger() {
-  $(".info").css("left", "0"),
-    $(".info2").css("left", "0"),
+  $(".info").css("right", "0"),
+    $(".info2").css("right", "0"),
     $(".info-heading").css("opacity", "0"),
     $(".info-heading")
       .delay(800)
@@ -50,8 +50,8 @@ function css_trigger() {
     });
 }
 function js_trigger() {
-  $(".info").css("left", "0"),
-    $(".info2").css("left", "0"),
+  $(".info").css("right", "0"),
+    $(".info2").css("right", "0"),
     $(".info-heading").css("opacity", "0"),
     $(".info-heading")
       .delay(800)
@@ -73,8 +73,8 @@ function js_trigger() {
     });
 }
 function node_trigger() {
-  $(".info").css("left", "0"),
-    $(".info2").css("left", "0"),
+  $(".info").css("right", "0"),
+    $(".info2").css("right", "0"),
     $(".info-heading").css("opacity", "0"),
     $(".info-heading")
       .delay(800)
@@ -96,8 +96,8 @@ function node_trigger() {
     });
 }
 function react_trigger() {
-  $(".info").css("left", "0"),
-    $(".info2").css("left", "0"),
+  $(".info").css("right", "0"),
+    $(".info2").css("right", "0"),
     $(".info-heading").css("opacity", "0"),
     $(".info-heading")
       .delay(800)
@@ -119,8 +119,8 @@ function react_trigger() {
     });
 }
 function materialize_trigger() {
-  $(".info").css("left", "0"),
-    $(".info2").css("left", "0"),
+  $(".info").css("right", "0"),
+    $(".info2").css("right", "0"),
     $(".info-heading").css("opacity", "0"),
     $(".info-heading")
       .delay(800)
@@ -142,8 +142,8 @@ function materialize_trigger() {
     });
 }
 function vsc_trigger() {
-  $(".info").css("left", "0"),
-    $(".info2").css("left", "0"),
+  $(".info").css("right", "0"),
+    $(".info2").css("right", "0"),
     $(".info-heading").css("opacity", "0"),
     $(".info-heading")
       .delay(800)
@@ -165,8 +165,8 @@ function vsc_trigger() {
     });
 }
 function git_trigger() {
-  $(".info").css("left", "0"),
-    $(".info2").css("left", "0"),
+  $(".info").css("right", "0"),
+    $(".info2").css("right", "0"),
     $(".info-heading").css("opacity", "0"),
     $(".info-heading")
       .delay(800)
@@ -188,8 +188,8 @@ function git_trigger() {
     });
 }
 function bt_trigger() {
-  $(".info").css("left", "0"),
-    $(".info2").css("left", "0"),
+  $(".info").css("right", "0"),
+    $(".info2").css("right", "0"),
     $(".info-heading").css("opacity", "0"),
     $(".info-heading")
       .delay(800)
@@ -211,8 +211,8 @@ function bt_trigger() {
     });
 }
 function java_trigger() {
-  $(".info").css("left", "0"),
-    $(".info2").css("left", "0"),
+  $(".info").css("right", "0"),
+    $(".info2").css("right", "0"),
     $(".info-heading").css("opacity", "0"),
     $(".info-heading")
       .delay(800)

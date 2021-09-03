@@ -164,6 +164,7 @@ $(".next-section").click(function () {
   $("#section2").removeClass("unactive");
   $("#section3").removeClass("unactive");
   $("#section4").removeClass("unactive");
+  $("#section5").removeClass("unactive");
   $("#footer").removeClass("unactive");
 });
 

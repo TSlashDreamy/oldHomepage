@@ -12,10 +12,10 @@ let options = {
     value: 0.94
   });
   $(".nodebar").circleProgress({
-    value: 0.60
+    value: 0.62
   });
   $(".reactbar").circleProgress({
-    value: 0.12
+    value: 0.63
   });
   $(".materializebar").circleProgress({
     value: 0.87
@@ -33,5 +33,5 @@ let options = {
     value: 0.63
   });
   $(".jsbar").circleProgress({
-    value: 0.62
+    value: 0.70   
   });

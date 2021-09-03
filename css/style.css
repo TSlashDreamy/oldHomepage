@@ -547,12 +547,15 @@ body {
 /* * Кнопка с волнами */
 .next-section {
   display: grid;
-  position: relative;
+  position: absolute !important;
+  top: 95% !important;
+  left: 50% !important;
+  transform: translate(-50%, -95%) !important;
   background: white;
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   z-index: 3;
   cursor: pointer;
-  transition: transform 0.5s !important;
+  transition: all 0.3s !important;
   animation-fill-mode: none !important;
 }
 
@@ -563,7 +566,8 @@ body {
 .next-section:hover,
 .next-section:active,
 .next-section:focus {
-  transform: translateY(-10px) !important;
+  background-color: #ffffffad;
+  transition: all 0.3s !important;
 }
 
 .next-section > svg {
@@ -812,6 +816,22 @@ body {
   opacity: 0;
   transform: translateX(-10vw);
   transition-delay: 0.5s;
+  border-radius: 2px;
+}
+
+.preview-image-left2 {
+  width: 31vw;
+  height: 44vw;
+  float: left;
+  margin-top: 14vw;
+  margin-left: 4vw;
+  border-radius: 2px;
+  transition: all 0.5s !important;
+  opacity: 0;
+  transform: translateX(-5vw);
+  transition-delay: 0.5s;
+  border-radius: 2px;
+  filter: brightness(90%);
 }
 
 .line-right {
@@ -827,8 +847,34 @@ body {
   transition-delay: 1s;
 }
 
+.line-right2 {
+  width: 10vw;
+  height: 55vw;
+  background: #ffffffad;
+  position: absolute;
+  margin-right: 170px;
+  right: 0;
+  opacity: 0;
+  transform: translateX(10vw);
+  transition: all 0.6s;
+  transition-delay: 1s;
+}
+
 .project-text-right {
   background: #000000ad;
+  position: absolute;
+  display: block;
+  width: 50vw;
+  height: 18vw;
+  top: 29%;
+  right: 11%;
+  opacity: 0;
+  transform: translateX(15vw);
+  transition: all 0.6s;
+}
+
+.project-text-right2 {
+  background: #ffffffad;
   position: absolute;
   display: block;
   width: 50vw;
@@ -855,6 +901,8 @@ body {
   transition: all 0.6s;
   transform: translateX(2vw);
 }
+
+
 
 .view-project-left:active {
   transform: scale(0.9);
@@ -926,6 +974,7 @@ body {
   transform: translateX(10vw);
 }
 
+
 .line-circle-left {
   background: #1b1b1b;
   border-radius: 50%;
@@ -937,6 +986,14 @@ body {
 
 .section-number-right {
   background: #000000ad;
+  position: absolute;
+  opacity: 0;
+  transition: all 0.6s;
+  transform: translateX(10vw);
+}
+
+.section-number-right2 {
+  background: #ffffffad;
   position: absolute;
   opacity: 0;
   transition: all 0.6s;
@@ -1180,7 +1237,7 @@ body {
   background-blend-mode: multiply;
   margin-top: -21vw;
   position: relative;
-  z-index: 6;
+  z-index: 5;
 }
 
 .skillbar-header {
@@ -1191,6 +1248,197 @@ body {
   transform: translate(-50%, -4vw);
   opacity: 0;
   transition: all 0.6s;
+}
+
+
+/* Четвёртая секция */
+.project4-section {
+  transition: all 0.6s;
+  background: -webkit-linear-gradient(
+    308deg,
+    #0D0D0D 0%,
+    #696969 83%,
+    #F2F2F2 100%
+  );
+  background: -o-linear-gradient(
+    308deg,
+    #0D0D0D 0%,
+    #696969 83%,
+    #F2F2F2 100%
+  );
+  background: -ms-linear-gradient(
+    308deg,
+    #0D0D0D 0%,
+    #696969 83%,
+    #F2F2F2 100%
+  );
+  background: -moz-linear-gradient(
+    308deg,
+    #0D0D0D 0%,
+    #696969 83%,
+    #F2F2F2 100%
+  );
+  background: linear-gradient(
+    142deg,
+    #0D0D0D 0%,
+    #696969 83%,
+    #F2F2F2 100%
+  );
+  height: 70vw;
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
+  position: relative;
+  z-index: 6;
+  margin-top: -20vw;
+}
+
+.preview-image-left {
+  width: 31vw;
+  height: 48vw;
+  float: left;
+  margin-top: 150px;
+  margin-left: 70px;
+  transition: all 0.5s !important;
+  opacity: 0;
+  transform: translateX(-10vw);
+  transition-delay: 0.5s;
+}
+
+.line-right {
+  width: 10vw;
+  height: 55vw;
+  background: #000000ad;
+  position: absolute;
+  margin-right: 170px;
+  right: 0;
+  opacity: 0;
+  transform: translateX(10vw);
+  transition: all 0.6s;
+  transition-delay: 1s;
+}
+
+.project-text-right {
+  background: #000000ad;
+  position: absolute;
+  display: block;
+  width: 50vw;
+  height: 18vw;
+  top: 29%;
+  right: 11%;
+  opacity: 0;
+  transform: translateX(15vw);
+  transition: all 0.6s;
+}
+
+.view-project-left {
+  position: relative;
+  z-index: 2;
+  text-transform: uppercase;
+  display: block;
+  text-decoration: none;
+  overflow: hidden;
+  border: none;
+  -webkit-appearance: none;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  box-shadow: 0 2px 25px rgba(0, 0, 10, 0.5);
+  opacity: 0;
+  transition: all 0.6s;
+  transform: translateX(2vw);
+}
+
+.view-project-left:active {
+  transform: scale(0.9);
+  background-color: #000000;
+  box-shadow: 0 2px 25px rgba(89, 0, 255, 0.2);
+}
+
+.view-project-left span {
+  position: relative;
+  color: rgb(255, 255, 255);
+  font-family: Arial, serif;
+  z-index: 1;
+  transition: all 0.5s;
+  mix-blend-mode: exclusion;
+  pointer-events: none;
+}
+
+.view-project-left:hover span {
+  position: relative;
+  z-index: 1;
+}
+
+.view-project-left:hover .liquid2 {
+  top: -120px;
+}
+
+.liquid2 {
+  position: absolute;
+  top: -80px;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background: #292929;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.liquid2::after,
+.liquid2::before {
+  content: "";
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  background: #000;
+}
+
+.liquid2::before {
+  border-radius: 45%;
+  background: rgb(0, 0, 0);
+  animation: animate 5s linear infinite;
+}
+
+.liquid2::after {
+  border-radius: 40%;
+  background: rgb(26, 26, 26);
+  animation: animate 10s linear infinite;
+}
+
+.button-line-left {
+  position: absolute;
+  background: #1b1b1b;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.6s;
+  transform: translateX(10vw);
+}
+
+.line-circle-left {
+  background: #1b1b1b;
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0;
+  transition: all 0.6s;
+  transform: translateX(10vw);
+}
+
+.section-number-right {
+  background: #000000ad;
+  position: absolute;
+  opacity: 0;
+  transition: all 0.6s;
+  transform: translateX(10vw);
+}
+
+.number-right {
+  color: #b1acac;
+  text-transform: uppercase;
+}
+
+.button-move {
+  text-decoration: none;
 }
 
 /* * Старый скилл бокс */
@@ -1807,7 +2055,8 @@ i {
   height: 70%;
   position: absolute;
   top: 50%;
-  left: -100%;
+  right: -100%;
+
   transform: translate(0, -50%);
   z-index: 10;
   border-radius: 5px;

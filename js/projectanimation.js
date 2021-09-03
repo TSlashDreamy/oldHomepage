@@ -26,12 +26,16 @@ $(".view-project").hover(
         // nothing
       } else {
         $(".preview-image-left").css("box-shadow", "black -17px 26px 32px 0"),
-          $(".preview-image-left").css("transform", "translateX(15px)");
+          $(".preview-image-left").css("transform", "translateX(15px)"),
+          $(".preview-image-left2").css("box-shadow", "black -17px 26px 32px 0"),
+          $(".preview-image-left2").css("transform", "translateX(15px)");
       }
     },
     function () {
       $(".preview-image-left").css("box-shadow", "none"),
-        $(".preview-image-left").css("transform", "translateX(0)");
+        $(".preview-image-left").css("transform", "translateX(0)"),
+        $(".preview-image-left2").css("box-shadow", "none"),
+        $(".preview-image-left2").css("transform", "translateX(0)");
     }
   ),
   $(".view-project3").hover(
